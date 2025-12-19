@@ -33,6 +33,32 @@ To use this with an MCP client (like Claude Desktop or a custom client), add it 
 
 For Cloudflare R2, your endpoint should look like: `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`
 
+#### Running from GitHub (Recommended)
+
+```json
+{
+  "mcpServers": {
+    "s3": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:AM1010101/s3-mcp-server"
+      ],
+      "env": {
+        "S3_ENDPOINT": "https://<YOUR_ACCOUNT_ID>.r2.cloudflarestorage.com",
+        "S3_ACCESS_KEY_ID": "<YOUR_ACCESS_KEY_ID>",
+        "S3_SECRET_ACCESS_KEY": "<YOUR_SECRET_ACCESS_KEY>",
+        "S3_REGION": "auto"
+      }
+    }
+  }
+}
+```
+
+#### Running Locally
+
+If you have cloned the repository and built it locally:
+
 ```json
 {
   "mcpServers": {

@@ -9,21 +9,30 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "mcp",
+    "s3",
+    "aws",
+    "model-context-protocol"
+  ],
   "author": "Andrew Merrin",
   "license": "ISC",
   "description": "",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/aws-sdk": "^0.0.42",
+    "@types/node": "^25.0.3",
+    "typescript": "^5.9.3"
+  },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.955.0",
     "@modelcontextprotocol/sdk": "^1.25.1",
     "dotenv": "^17.2.3",
     "zod": "^4.2.1"
-  },
-  "devDependencies": {
-    "@types/aws-sdk": "^0.0.42",
-    "@types/node": "^25.0.3",
-    "typescript": "^5.9.3"
   }
 }
